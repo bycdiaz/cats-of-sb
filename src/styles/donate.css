@@ -1,0 +1,9 @@
+.donate-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.donate-banner-image {
+  max-width: 400px;
+}
