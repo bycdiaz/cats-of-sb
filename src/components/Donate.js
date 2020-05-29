@@ -5,22 +5,16 @@ import "../styles/donate.css"
 function Nav() {
   return (
     <div className="donate-banner">
-      {
-       images.map(image => {
-         return (
-          <img
-            className='donate-banner-image'
-            src={image['image']}
-            alt={image['alt']}
-            key={image['alt']}
-          ></img>
-         )
-       }) 
-      }
+      <img
+        className='donate-banner-image'
+        src={images[0]['image']}
+        alt={images[0]['alt']}
+        key={images[0]['alt']}
+      ></img>
       <div className="call-to-action">
         <h2>Welcome</h2>
         <h3>Save A Life</h3>
-        <button>Support Our Work</button>
+        <button className="donate-button">Support Our Work</button>
       </div>
     </div>
   );
