@@ -2,7 +2,7 @@ import React from 'react';
 import images from "../json/images";
 import "../styles/donate.css"
 
-function Nav() {
+function Donate() {
   return (
     <div className="donate-banner">
       <img
@@ -20,4 +20,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Donate;

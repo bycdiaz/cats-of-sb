@@ -1,16 +1,29 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import "./styles/app.css";
 import Nav from "./components/Nav";
-import Donate from "./components/Donate";
+import Landing from "./components/Landing";
+import Contribute from "./components/Contribute";
+import Adopt from "./components/Adopt";
+import OurStory from './components/OurStory';
 
-// TODO Look into React Router to point to different pages.
 function App() {
   return (
-    <div className="App">
-      <h1 className="page-title">Cats of San Bernardino</h1>
-      <Nav />
-      <Donate /> 
-    </div>
+    <Router>
+      <div className="App">
+        <Nav /> 
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/contribute" component={Contribute} />
+          <Route path="/adopt" component={Adopt} />
+          <Route path="/ourstory" component={OurStory} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
